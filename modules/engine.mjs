@@ -3,17 +3,17 @@
 import { getPreferences } from "./preferences.mjs";
 
 function formatBytes(bytes) {
-  if (!bytes || isNaN(bytes) || bytes === 0) return "0 Bytes";
+  if (!bytes || isNaN(bytes) || bytes === 0) return "0 " + browser.i18n.getMessage("byteSymbol");
   const k = 1024;
   const dm = 2;
-  const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+  const sizes = [browser.i18n.getMessage("byteSymbol"), "K" + browser.i18n.getMessage("byteSymbol"), "M" + browser.i18n.getMessage("byteSymbol"), "G" + browser.i18n.getMessage("byteSymbol"), "T" + browser.i18n.getMessage("byteSymbol")];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 }
 
 function displaySummary(stats, prefs) {
   try {
-    const msg = "Purged " + String(stats.messages || 0) + " messages.\nRecovered " + formatBytes(stats.bytes) + " of disk space.";
+    const msg = browser.i18n.getMessage("summaryMessage", [String(stats.messages || 0), formatBytes(stats.bytes)]);
 
     if (prefs.play_sound) {
       let audio = new Audio(browser.runtime.getURL("sounds/notify.mp3"));
@@ -22,11 +22,11 @@ function displaySummary(stats, prefs) {
 
     if (prefs.notify_summary) {
       if (browser.PurgPakAPI && browser.PurgPakAPI.showNotification) {
-        browser.PurgPakAPI.showNotification("PurgPak Finished", msg);
+        browser.PurgPakAPI.showNotification(browser.i18n.getMessage("summaryTitle"), msg);
       } else {
         browser.notifications.create("purgpak-summary", {
           type: "basic",
-          title: "PurgPak Finished",
+          title: browser.i18n.getMessage("summaryTitle"),
           message: msg,
           iconUrl: "icons/icon-32.png"
         }).catch(() => {});
