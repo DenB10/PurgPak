@@ -1,0 +1,67 @@
+{
+  "extensionDescription": {
+    "message": "Purge Junk/Spam/Trash and compact mail folders across multiple accounts with disk space summaries."
+  },
+  "toolsMenuItem": {
+    "message": "Run PurgPak (All Enabled Accounts)"
+  },
+  "folderContextItem": {
+    "message": "Compact folders with PurgPak"
+  },
+  "byteSymbol": {
+    "message": "B"
+  },
+  "summaryTitle": {
+    "message": "PurgPak Finished"
+  },
+  "summaryMessage": {
+    "message": "Purged $P1$ messages.\nRecovered $P2$ of disk space.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsTitle": {
+    "message": "PurgPak Configuration"
+  },
+  "optionsByLabel": {
+    "message": "by"
+  },
+  "optionsNotificationsHeader": {
+    "message": "Notifications"
+  },
+  "optionsNotifySummary": {
+    "message": "Show summary notification upon completion"
+  },
+  "optionsPlaySound": {
+    "message": "Play notification sound upon completion"
+  },
+  "optionsActionsHeader": {
+    "message": "Per-Account Processing Rules"
+  },
+  "optionsActionsDescription": {
+    "message": "Enable PurgPak for specific accounts and customize what actions run for each."
+  },
+  "optionsAccount": {
+    "message": "Account"
+  },
+  "optionsEmptyJunk": {
+    "message": "Empty Junk"
+  },
+  "optionsEmptyTrash": {
+    "message": "Empty Trash"
+  },
+  "optionsCompactFolders": {
+    "message": "Compact Folders"
+  },
+  "optionsSaveButton": {
+    "message": "Save Settings"
+  },
+  "optionsStatusMessage": {
+    "message": "Saved successfully!"
+  }
+}
