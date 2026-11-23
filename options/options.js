@@ -2,6 +2,14 @@
 
 import { getPreferences, savePreferences } from "../modules/preferences.mjs";
 
+// Options strings localization
+[...document.querySelectorAll('[data-i18n]')].forEach(e => {
+  e[e.dataset.i18nValue || 'textContent'] = chrome.i18n.getMessage(e.dataset.i18n);
+  if (e.dataset.i18nTitle) {
+    e.title = chrome.i18n.getMessage(e.dataset.i18nTitle);
+  }
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   const prefs = await getPreferences();
   const accounts = await browser.accounts.list();
@@ -30,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     cbEnabled.checked = accRules.enabled;
     const spanName = document.createElement("span");
     spanName.className = "account-name-lbl";
-    spanName.textContent = acc.name || `Account (${acc.id})`;
+    spanName.textContent = acc.name || `${browser.i18n.getMessage("optionsAccount")} (${acc.id})`;
     lblName.appendChild(cbEnabled);
     lblName.appendChild(spanName);
     tdName.appendChild(lblName);
@@ -96,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await savePreferences(updatedPrefs);
 
     const status = document.getElementById("status_msg");
-    status.textContent = "Saved successfully!";
+    status.textContent = browser.i18n.getMessage("optionsStatusMessage");
     setTimeout(() => { status.textContent = ""; }, 2500);
   });
 });
