@@ -1,0 +1,67 @@
+{
+  "extensionDescription": {
+    "message": "Supprimez les indésirables et les éléments de la corbeille, et compactez les dossiers de messagerie de plusieurs comptes avec bilan de l’opération."
+  },
+  "toolsMenuItem": {
+    "message": "Exécuter PurgPak (tous les comptes activés)"
+  },
+  "folderContextItem": {
+    "message": "Compacter les dossiers avec PurgPak"
+  },
+  "byteSymbol": {
+    "message": "o"
+  },
+  "summaryTitle": {
+    "message": "PurgPak terminé "
+  },
+  "summaryMessage": {
+    "message": "$P1$ messages supprimés \n$P2$ d’espace disque récupérés",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      }
+    }
+  },
+  "optionsTitle": {
+    "message": "Configuration de PurgPak"
+  },
+  "optionsByLabel": {
+    "message": "développée par"
+  },
+  "optionsNotificationsHeader": {
+    "message": "Notifications"
+  },
+  "optionsNotifySummary": {
+    "message": "Afficher le bilan une fois l’opération terminée"
+  },
+  "optionsPlaySound": {
+    "message": "Jouer un son une fois l’opération terminée"
+  },
+  "optionsActionsHeader": {
+    "message": "Règles de traitement par compte"
+  },
+  "optionsActionsDescription": {
+    "message": "Activer PurgPak pour certains comptes et personnaliser les actions à exécuter pour chacun d’entre eux."
+  },
+  "optionsAccount": {
+    "message": "Compte"
+  },
+  "optionsEmptyJunk": {
+    "message": "Supprimer les indésirables"
+  },
+  "optionsEmptyTrash": {
+    "message": "Vider la corbeille"
+  },
+  "optionsCompactFolders": {
+    "message": "Compacter les dossiers"
+  },
+  "optionsSaveButton": {
+    "message": "Enregistrer les paramètres"
+  },
+  "optionsStatusMessage": {
+    "message": "Paramètres enregistrés avec succès !"
+  }
+}
