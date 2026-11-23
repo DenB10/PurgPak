@@ -3,7 +3,9 @@
   "name": "PurgPak",
   "version": "1.7.5",
   "author": "CybTekSol [ https://github.com/CybTekSol ]",
-  "description": "Purge Junk/Spam/Trash and compact mail folders across multiple accounts with disk space summaries.",
+  "description": "__MSG_extensionDescription__",
+  "homepage_url": "https://github.com/CybTekSol/PurgPak",
+  "default_locale": "en",
   "applications": {
     "gecko": {
       "id": "purgpak@cybteksol.github.com",
