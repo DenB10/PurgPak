@@ -26,13 +26,13 @@ async function setupMenus() {
 
     browser.menus.create({
       id: "purgpak-tools-menu",
-      title: "Run PurgPak (All Enabled Accounts)",
+      title: browser.i18n.getMessage("toolsMenuItem"),
       contexts: ["tools_menu"]
     });
 
     browser.menus.create({
       id: "purgpak-folder-context",
-      title: "Compact folders with PurgPak",
+      title: browser.i18n.getMessage("folderContextItem"),
       contexts: ["folder_pane"]
     });
 
