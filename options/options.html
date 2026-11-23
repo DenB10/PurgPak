@@ -8,32 +8,32 @@
 <body>
   <div class="container">
     <header>
-      <h1>PurgPak Configuration</h1>
-      <span class="version">v1.7.5 by CybTekSol [ https://github.com/CybTekSol ]</span>
+      <h1 data-i18n="optionsTitle"></h1>
+      <span class="version">v1.7.5 <span data-i18n="optionsByLabel"></span> CybTekSol [ https://github.com/CybTekSol ]</span>
     </header>
 
     <section class="card">
-      <h2>Notifications</h2>
+      <h2 data-i18n="optionsNotificationsHeader"></h2>
       <label class="toggle-row">
         <input type="checkbox" id="notify_summary">
-        <span>Show summary notification upon completion</span>
+        <span data-i18n="optionsNotifySummary"></span>
       </label>
       <label class="toggle-row">
         <input type="checkbox" id="play_sound">
-        <span>Play notification sound upon completion</span>
+        <span data-i18n="optionsPlaySound"></span>
       </label>
     </section>
 
     <section class="card">
-      <h2>Per-Account Processing Rules</h2>
-      <p class="description">Enable PurgPak for specific accounts and customize what actions run for each.</p>
+      <h2 data-i18n="optionsActionsHeader"></h2>
+      <p class="description" data-i18n="optionsActionsDescription"></p>
       <table class="account-table" id="accounts_table">
         <thead>
           <tr>
-            <th>Account</th>
-            <th>Empty Junk</th>
-            <th>Empty Trash</th>
-            <th>Compact Folders</th>
+            <th data-i18n="optionsAccount"></th>
+            <th data-i18n="optionsEmptyJunk"></th>
+            <th data-i18n="optionsEmptyTrash"></th>
+            <th data-i18n="optionsCompactFolders"></th>
           </tr>
         </thead>
         <tbody id="accounts_tbody">
@@ -43,7 +43,7 @@
     </section>
 
     <footer>
-      <button id="save_btn" class="primary-btn">Save Settings</button>
+      <button id="save_btn" class="primary-btn" data-i18n="optionsSaveButton"></button>
       <span id="status_msg" class="status-msg"></span>
     </footer>
   </div>
